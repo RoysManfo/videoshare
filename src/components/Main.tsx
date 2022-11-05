@@ -5,7 +5,7 @@ import iphone from '../img/iphone.jpg'
 import statistics from '../img/statistics.jpg'
 import hacker from '../img/hacker.jpg'
 
-export default Main;
+export default MainPage;
 
 class Video {
     private title: string;
@@ -84,7 +84,7 @@ class List{
 }
 
 
-function Main(){
+function MainPage(){
     return (
         <main>
             <VideoList name="Trending" number="4" />

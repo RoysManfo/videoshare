@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './css/index.css';
-import Main from './components/Main';
+import MainPage from './components/Main';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './components/Navbar';
 
@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 root.render(
 	<React.StrictMode>
 		<Navbar />
-		<Main />
+		<MainPage />
 	</React.StrictMode>
 );
 
