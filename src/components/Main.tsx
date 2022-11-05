@@ -31,13 +31,13 @@ class Video {
 
 
         return (
-            <div className="video-presentation">
+            <a className="video-presentation" href="/watch/">
                 <img src={source} className="video-image" alt='thumbnail'/>
                 <div className="video-description">
                     <h1 className='video-title'>{this.title}</h1>
                     <p className='video-author'>{this.author}</p>
                 </div>
-            </div>
+            </a>
         )
     }
 }

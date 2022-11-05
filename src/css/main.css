@@ -5,6 +5,7 @@
     display: flex;
     position: relative;
     isolation: isolate;
+    text-decoration: none;
 }
 .video-image{
     position: absolute;
