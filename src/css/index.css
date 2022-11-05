@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+nav{
+	background-color: #20232a;
+	padding: 1.5rem 2rem;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.company{margin: 0;padding: 0;color: #fff;}
+
+.right-nav{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.navigate{
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.navigate li{
+	padding-inline: 1rem;
+	cursor: pointer;
+	transition: .25s ease;
+	color: #888;
+}
+.navigate li:hover{
+	color: #61dafb;
+}
+.profile{
+	display: grid;
+	place-items: center;
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: .5s ease;
+	position: relative;
+	isolation: isolate;
+}
+.profile::before{
+	content: '';
+	position: absolute;
+	height: 0;
+	aspect-ratio: 1/1;
+	border-radius: inherit;
+	z-index: -1;
+	transition: .25s ease;
+}
+.profile-img{
+	height: 100%;
+	aspect-ratio: 1/1;
+	background: url(../img/logo.svg) center center no-repeat;
+	background-size: cover;
+}
+.profile:hover::before{background: #14161a; height: calc(100% + 10px);}
