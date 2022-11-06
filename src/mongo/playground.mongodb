@@ -1,0 +1,5 @@
+use("appdb");
+
+db.videos.insert(
+    {title: "Why are iphones so expensive"}
+)

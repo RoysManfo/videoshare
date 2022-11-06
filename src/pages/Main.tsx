@@ -1,13 +1,14 @@
 import React from 'react';
 import '../css/main.css';
 import Navbar from './Navbar'
+import { Link } from 'react-router-dom';
 
 import pc from  '../img/pc.jpg';
 import iphone from '../img/iphone.jpg'
 import statistics from '../img/statistics.jpg'
 import hacker from '../img/hacker.jpg'
 
-export default MainPage;
+export default MainPage
 
 class Video {
     private title: string;
@@ -33,13 +34,13 @@ class Video {
 
 
         return (
-            <a className="video-presentation" href="/watch/">
+            <Link to='/watch' className="video-presentation">
                 <img src={source} className="video-image" alt='thumbnail'/>
                 <div className="video-description">
                     <h1 className='video-title'>{this.title}</h1>
                     <p className='video-author'>{this.author}</p>
                 </div>
-            </a>
+            </Link>
         )
     }
 }
@@ -62,7 +63,7 @@ class List{
 
     public getName(): string {return this.name;};
     public setName(name: string) {this.name = name};
-    public render(n: number): any {
+    public render(n: number, width: string = "max", orientation: any = "row"): any {
         // @param n is the number of videos of the list
 
         let videos: any = [];
@@ -77,7 +78,7 @@ class List{
         return (
             <>
                 <h1 className='list-title'>{this.name}</h1>
-                <div className='video-list'>
+                <div className='video-list' style={{width: width +"-content", flexDirection: orientation}}>
                     {videos}
                 </div>
             </>
@@ -86,22 +87,26 @@ class List{
 }
 
 
-function MainPage(){
-    return (
-        <>
-            <Navbar />
-            <main>
-                <VideoList name="Trending" number="4" />
-                <VideoList name="Selected for you" number="8" />
-            </main>
-        </>
-    )
+function MainPage(props: any){
+    if (props.home)
+        return (
+            <>
+                <Navbar />
+                <main>
+                    <VideoList name="Trending" number="4" />
+                    <VideoList name="Selected for you" number="8" />
+                </main>
+            </>
+        )
+    else{
+        return (<VideoList name={props.name} number={props.number} width={props.width} orientation={props.orientation} />)
+    }
 }
 
 
-function VideoList(props: any) {
+export function VideoList(props: any) {
     const list = new List(props.name);
     return (
-        list.render(props.number)
+        list.render(props.number, props.width, props.orientation)
     );
 }
