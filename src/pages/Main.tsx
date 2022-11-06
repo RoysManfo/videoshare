@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import '../css/main.css';
 import Navbar from './Navbar'
-import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 import pc from  '../img/pc.jpg';
 import iphone from '../img/iphone.jpg'
 import statistics from '../img/statistics.jpg'
 import hacker from '../img/hacker.jpg'
 
-export default MainPage
+export default VideoList
 
 class Video {
     private title: string;
@@ -87,7 +89,7 @@ class List{
 }
 
 
-function MainPage(props: any){
+export function MainPage(props: any){
     if (props.home)
         return (
             <>
@@ -96,6 +98,7 @@ function MainPage(props: any){
                     <VideoList name="Trending" number="4" />
                     <VideoList name="Selected for you" number="8" />
                 </main>
+                <Footer />
             </>
         )
     else{

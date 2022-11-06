@@ -1,13 +1,15 @@
 import React, {Component} from 'react';
-import ReactDOM from "react-dom/client";
+
 import Navbar from './Navbar'
 import VideoList from './Main'
+import Footer from './Footer';
 
 export default function Watch() {
 	return (
 		<>
 			<Navbar />
 			<VideoPage />
+            <Footer />
 		</>
 	);
 }

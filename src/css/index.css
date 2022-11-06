@@ -5,6 +5,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	overflow-x: hidden;
 }
 
 code {
@@ -71,3 +72,23 @@ nav{
 	background-size: cover;
 }
 .profile:hover::before{background: #14161a; height: calc(100% + 10px);}
+
+
+
+
+footer{
+	width: 100%;
+	min-height: 300px;
+	background: #20232a;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: center;
+}
+.footer-company{
+    color: #999;
+    margin: 0;
+    padding: 2rem 0 0 0;
+    font-size: 3rem;
+}
+.slogan{font-size: 1.5rem;color: #999;}

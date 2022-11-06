@@ -1,5 +1,5 @@
 use("appdb");
 
-db.videos.insert(
-    {title: "Why are iphones so expensive"}
+db.videos.insertOne(
+    {title: "Why are iphones so expensive", author: "VideoShare", likes: 12243, dislikes: 645}
 )
