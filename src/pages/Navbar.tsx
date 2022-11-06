@@ -13,7 +13,13 @@ export default function Navbar(){
                     <li>Upload</li>
                     <li>Library</li>
                 </ul>
-                <div className="profile" title='Profile'><div className='profile-img'></div></div>
+                <div className="profile" title='Profile'>
+                    <div className='profile-img'></div>
+                    <ul className="menu">
+                        <li title='Profile'>Profile</li>
+                        <li title='Account'>Account</li>
+                    </ul>
+                </div>
             </div>
         </nav>
     )

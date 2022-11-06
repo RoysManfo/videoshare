@@ -73,9 +73,24 @@ nav>a{all: unset;cursor: pointer;}
 	background-size: cover;
 }
 .profile:hover::before{background: #14161a; height: calc(100% + 10px);}
-
-
-
+.menu{
+	position: absolute;
+	top: calc(80px - 26px);
+	right: -32px;
+	background: #14161a;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+.menu li{
+	padding: 1rem 3rem;
+	font-weight: 600;
+	transition: .25s ease;
+}
+.menu li:hover{
+	background: #20232a;
+	color: #61dafb;
+}
 
 footer{
 	width: 100%;
