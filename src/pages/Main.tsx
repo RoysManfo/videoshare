@@ -1,5 +1,7 @@
 import React from 'react';
 import '../css/main.css';
+import Navbar from './Navbar'
+
 import pc from  '../img/pc.jpg';
 import iphone from '../img/iphone.jpg'
 import statistics from '../img/statistics.jpg'
@@ -86,10 +88,13 @@ class List{
 
 function MainPage(){
     return (
-        <main>
-            <VideoList name="Trending" number="4" />
-            <VideoList name="Selected for you" number="8" />
-        </main>
+        <>
+            <Navbar />
+            <main>
+                <VideoList name="Trending" number="4" />
+                <VideoList name="Selected for you" number="8" />
+            </main>
+        </>
     )
 }
 
