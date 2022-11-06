@@ -6,6 +6,7 @@
     position: relative;
     isolation: isolate;
     text-decoration: none;
+    overflow: hidden;
 }
 .video-image{
     position: absolute;
@@ -13,7 +14,9 @@
     aspect-ratio: inherit;
     z-index: -1;
     filter: brightness(.5);
+    transition: .5s ease;
 }
+.video-presentation:hover .video-image{scale: 1.1;}
 .video-description{
     display: flex;
     flex-direction: column;
