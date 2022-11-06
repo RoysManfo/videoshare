@@ -102,7 +102,7 @@ export function MainPage(props: any){
             </>
         )
     else{
-        return (<VideoList name={props.name} number={props.number} width={props.width} orientation={props.orientation} />)
+        return (<VideoList name={props.name} number={props.number} width={props.width} orientation={props.orientation} />) 
     }
 }
 
