@@ -70,3 +70,20 @@
     width: clamp(500px, 100%,90vw);
     aspect-ratio: 16 /9;
 }
+
+
+.commenter-pic{
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    margin-right: 2rem;
+    background: #0003;
+    border-radius: 50%;
+}
+.comment{
+    display: flex;
+    background: #eee;
+    padding: 2rem;
+}
+.comment:not(:last-child){border-bottom: solid 2px #ddd9;}
+.comment h4{margin: 0;}
+.comment p{margin: 10px 0;}

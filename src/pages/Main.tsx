@@ -47,7 +47,7 @@ class Video {
     }
 }
 
-function randomInt(n: number, end: number): number {
+export function randInt(n: number, end: number): number {
     let rand = (Math.random()+n) * end;
     let decimal = rand;
     while (decimal>1){decimal /= 10};
@@ -73,7 +73,7 @@ class List{
         const videoAuthors = ["VideoShare", "JustOneMore", "ReacTor", "Hidden Facts"];
         
         for (let i = 0; i < n; i++) {
-            let video = new Video(videoTitles[randomInt(0, videoTitles.length)], videoAuthors[randomInt(0, videoAuthors.length)])
+            let video = new Video(videoTitles[randInt(0, videoTitles.length)], videoAuthors[randInt(0, videoAuthors.length)])
             videos.push(video.presentation());
         }
 

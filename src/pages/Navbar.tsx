@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/index.css';
 export default function Navbar(){
     return (
         <nav className="nav">
-            <h1 className='company'>VideoShare</h1>
+            <Link to={"/"}>
+                <h1 className='company' title='VideoShare Home page'>VideoShare</h1>
+            </Link>
             <div className='right-nav'>
                 <ul className='navigate'>
                     <li>Following</li>
