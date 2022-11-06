@@ -13,9 +13,9 @@ export default function Navbar(){
                     <li>Upload</li>
                     <li>Library</li>
                 </ul>
-                <div className="profile" title='Profile'>
+                <div className="profile" title='Profile' id='profile-pic'>
                     <div className='profile-img'></div>
-                    <ul className="menu">
+                    <ul className="menu" id='menu'>
                         <li title='Profile'>Profile</li>
                         <li title='Account'>Account</li>
                     </ul>

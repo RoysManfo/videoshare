@@ -20,6 +20,8 @@ nav{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	z-index: 9999 !important;
+	isolation: isolate;
 }
 nav>a{all: unset;cursor: pointer;}
 .company{margin: 0;padding: 0;color: #fff;}
@@ -52,7 +54,6 @@ nav>a{all: unset;cursor: pointer;}
 	height: 2rem;
 	width: 2rem;
 	border-radius: 50%;
-	cursor: pointer;
 	transition: .5s ease;
 	position: relative;
 	isolation: isolate;
@@ -71,16 +72,27 @@ nav>a{all: unset;cursor: pointer;}
 	aspect-ratio: 1/1;
 	background: url(../img/logo.svg) center center no-repeat;
 	background-size: cover;
+	cursor: pointer;
 }
-.profile:hover::before{background: #14161a; height: calc(100% + 10px);}
+.profile:has(.profile-img:hover)::before{background: #14161a; height: calc(100% + 10px);}
+
+
 .menu{
 	position: absolute;
 	top: calc(80px - 26px);
-	right: -32px;
+	right: -16px;
 	background: #14161a;
 	margin: 0;
 	list-style: none;
 	padding: 0;
+	opacity: 0;
+	transform: translateY(2rem);
+	z-index: 2;
+	transition: .5s ease;
+}
+.profile:hover .menu{
+	opacity: 1;
+	transform: translateY(1rem);
 }
 .menu li{
 	padding: 1rem 3rem;
