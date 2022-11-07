@@ -41,34 +41,26 @@ function CommenSection(){
     return (
         <section className="coment-section">
             <h3 style={{fontWeight: 500}}>Comments</h3>
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
-            <Comment />
+            <Comments  number={randInt(0, 10)}/>
         </section>
     )
 }
 
 
 class Comment extends React.Component{
-
+    
     private authorList = ["VideoShare", "JustOneMore", "ReacTor", "Hidden Facts"];
     private commentList = ["Veri gud","I realy like this", "Awsome!!!","I need another one pls","This sucks!"];
-
+    
     private author: string;
     private comment: string;
-
+    
     public constructor(props: any) {
         super(props);
         this.author = this.authorList[randInt(0, this.authorList.length)];
         this.comment = this.commentList[randInt(0, this.commentList.length)];
     }
-
+    
     render(){
         return (
             <div className="comment">
@@ -80,4 +72,17 @@ class Comment extends React.Component{
             </div>
         )
     }
+}
+
+function Comments(props: any){
+    let comments = []
+    for(let i = 0; i < props.number; i++) {
+        const comment = new Comment(props.comments)
+        comments.push(comment.render());
+    }
+    return(
+        <>
+            {comments}
+        </>
+    )
 }
