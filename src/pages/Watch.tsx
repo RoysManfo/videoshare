@@ -1,29 +1,29 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 import Navbar from './Navbar'
-import VideoList, { randInt }  from './Main'
+import VideoList, { randInt } from './Main'
 import Footer from './Footer';
 
 export default function Watch() {
-	return (
-		<>
-			<Navbar />
-			<VideoPage />
+    return (
+        <>
+            <Navbar />
+            <VideoPage />
             <Footer />
-		</>
-	);
+        </>
+    );
 }
 
-function VideoPlayer(){
-	return (
+function VideoPlayer() {
+    return (
         <video controls className='video-player'>
-            <source src="/videos/video.mp4" type="video/mp4"/>
+            <source src="/videos/video.mp4" type="video/mp4" />
         </video>
-	)
+    )
 }
 
 
-function VideoPage(){
+function VideoPage() {
     return (
         <section className='video-page'>
             <section className='video-container'>
@@ -37,31 +37,31 @@ function VideoPage(){
     )
 }
 
-function CommenSection(){
+function CommenSection() {
     return (
         <section className="coment-section">
-            <h3 style={{fontWeight: 500}}>Comments</h3>
-            <Comments  number={randInt(0, 10)}/>
+            <h3 style={{ fontWeight: 500 }}>Comments</h3>
+            <Comments number={randInt(0, 10)} />
         </section>
     )
 }
 
 
-class Comment extends React.Component{
-    
+class Comment extends React.Component {
+
     private authorList = ["VideoShare", "JustOneMore", "ReacTor", "Hidden Facts"];
-    private commentList = ["Veri gud","I realy like this", "Awsome!!!","I need another one pls","This sucks!"];
-    
+    private commentList = ["Veri gud", "I realy like this", "Awsome!!!", "I need another one pls", "This sucks!"];
+
     private author: string;
     private comment: string;
-    
+
     public constructor(props: any) {
         super(props);
         this.author = this.authorList[randInt(0, this.authorList.length)];
         this.comment = this.commentList[randInt(0, this.commentList.length)];
     }
-    
-    render(){
+
+    render() {
         return (
             <div className="comment">
                 <div className="commenter-pic"></div>
@@ -74,13 +74,13 @@ class Comment extends React.Component{
     }
 }
 
-function Comments(props: any){
+function Comments(props: any) {
     let comments = []
-    for(let i = 0; i < props.number; i++) {
+    for (let i = 0; i < props.number; i++) {
         const comment = new Comment(props.comments)
         comments.push(comment.render());
     }
-    return(
+    return (
         <>
             {comments}
         </>

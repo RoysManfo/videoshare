@@ -1,6 +1,5 @@
 import React from 'react';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter,Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { MainPage } from "./Main";
 import Watch from './Watch';
 

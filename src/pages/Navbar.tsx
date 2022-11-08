@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/index.css';
-export default function Navbar(){
+
+export default function Navbar() {
     return (
         <nav className="nav">
             <Link to={"/"}>
