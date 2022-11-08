@@ -11,10 +11,34 @@
 		/>
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
 		<title>VideoShare</title>
+		<style>
+			.error {
+				place-items: center;
+				position: fixed;
+				z-index: 9999;
+				background: #000;
+				color: #fff;
+				height: 100vh;
+				width: 100vw;
+				font-size: 2rem;
+				text-align: center;
+				font-weight: 700;
+				display: none;
+			}
+			.error p{
+				text-align: center;
+    			width: 80%;
+			}
+			
+			@media (max-width: 999px) {
+				.error{display: grid;overflow: hidden;}
+				html, body{overflow: hidden;}
+			}
+		</style>
 	</head>
 	<body>
+		<div class="error"><p>Minimum screen width to view this page is 1000px <br> (Like a tablet in orizontal)</p></div>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
 	</body>
